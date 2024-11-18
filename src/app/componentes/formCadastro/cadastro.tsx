@@ -9,7 +9,35 @@ import FormControl from '@mui/material/FormControl';
 import TextField from '@mui/material/TextField';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff'
+import { createTheme, ThemeProvider } from '@mui/material/styles';
 
+const theme = createTheme({
+    palette: {
+      mode: 'dark',
+      primary: {
+        main: '#ffffff', // Cor do texto e borda
+      },
+    },
+    components: {
+      MuiOutlinedInput: {
+        styleOverrides: {
+          root: {
+            '& .MuiOutlinedInput-notchedOutline': {
+              borderColor: '#ffffff',
+            },
+            '&:hover .MuiOutlinedInput-notchedOutline': {
+              borderColor: '#90caf9', 
+            },
+            '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+              borderColor: '#ffffff', 
+            },
+            color: '#ffffff', 
+          },
+        },
+      },
+      
+    },
+  });
 export default function Cadastro(){
     const [showPassword, setShowPassword] = React.useState(false);
 
@@ -25,6 +53,8 @@ export default function Cadastro(){
     return(
     <>
     <p>Cadastro</p>
+    <ThemeProvider theme={theme}>
+
              <Box
                 component="form"
                 sx={{ m: 1, width: '35ch',display:'flex',flexDirection:'column' } }
@@ -74,6 +104,7 @@ export default function Cadastro(){
                 </FormControl>
                 <button>Cadastrar</button>
              </Box>
+    </ThemeProvider>
     </>
     )
 }

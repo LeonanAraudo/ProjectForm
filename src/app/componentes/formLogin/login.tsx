@@ -11,25 +11,34 @@ import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-const theme = createTheme ({
+const theme = createTheme({
+    palette: {
+      mode: 'dark',
+      primary: {
+        main: '#ffffff', // Cor do texto e borda
+      },
+    },
     components: {
-        MuiOutlinedInput: {
-          styleOverrides: {
-            root: {
-              '& .MuiOutlinedInput-notchedOutline': {
-                borderColor: 'blue', 
-              },
-              '&:hover .MuiOutlinedInput-notchedOutline': {
-                borderColor: 'green',
-              },
-              '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
-                borderColor: 'red', 
-              }
-            }
-          }
-        }
-      }
-});
+      MuiOutlinedInput: {
+        styleOverrides: {
+          root: {
+            '& .MuiOutlinedInput-notchedOutline': {
+              borderColor: '#ffffff',
+            },
+            '&:hover .MuiOutlinedInput-notchedOutline': {
+              borderColor: '#90caf9', 
+            },
+            '&.Mui-focused .MuiOutlinedInput-notchedOutline': {
+              borderColor: '#ffffff', 
+            },
+            color: '#ffffff', 
+          },
+        },
+      },
+      
+    },
+  });
+  
 
 export default function Login(){
     const [showPassword, setShowPassword] = React.useState(false);
@@ -53,7 +62,9 @@ export default function Login(){
                 >
                 <TextField id="standard-basic" label="Nome" variant="standard" />
                 <FormControl sx={{ width: '35ch' }} variant="standard">
-                    <InputLabel htmlFor="standard-adornment-password" >Senha</InputLabel>
+                    <InputLabel htmlFor="standard-adornment-password" sx={{
+            input: { color: '#ffffff' }, // Cor do texto no campo
+          }}>Senha</InputLabel>
                     <Input
                         id="standard-adornment-password"
                         type={showPassword ? 'text' : 'password'}
