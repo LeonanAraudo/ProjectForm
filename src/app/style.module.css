@@ -1,10 +1,65 @@
-.container{
-    width: 100vw;
-    height: 100vh;
-    position: relative;
-    display: flex;
-    overflow: hidden;
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  display: flex;
+  overflow: hidden;
+  background-color: black;
+  color: white;
 }
-.imagem{
-    
+
+.imagem {
+  position: absolute;
+  left: 0;
+  width: 45%;
+  height: 100%;
+  background-image: url('/folhas.jpeg');
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+}
+
+.formContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.form {
+  position: absolute;
+  width: 50%;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.5s ease;
+}
+
+.formLogin {
+  left: 48%; 
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.formCadastro {
+  left: 0; 
+  opacity: 0;
+  pointer-events: none;
+}
+
+.formCadastroActive .imagem {
+  transform: translateX(125%); 
+}
+
+.formCadastroActive .formLogin {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.formCadastroActive .formCadastro {
+  opacity: 1;
+  pointer-events: auto;
 }

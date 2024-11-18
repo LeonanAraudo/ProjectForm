@@ -24,7 +24,7 @@ export default function Cadastro(){
     };
     return(
     <>
-    <p>Login</p>
+    <p>Cadastro</p>
              <Box
                 component="form"
                 sx={{ m: 1, width: '35ch',display:'flex',flexDirection:'column' } }
