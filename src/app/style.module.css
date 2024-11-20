@@ -45,6 +45,7 @@
 }
 
 .formCadastro {
+  padding-top: 30px;
   left: 0; 
   opacity: 0;
   pointer-events: none;
@@ -65,8 +66,8 @@
 }
 .galho{
   background-image: url('/galhos.png');
-  width: 370px;
-  height: 210px;
+  width: 365px;
+  height: 215px;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -82,6 +83,7 @@
 .alingLogin{
   width: 50%;
   height: 70%;
+  margin-top: 10px;
   display:flex ;
   align-items: baseline;
   justify-content: baseline;
