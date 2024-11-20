@@ -30,7 +30,7 @@
 .form {
   position: absolute;
   width: 50%;
-  padding: 2rem;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -62,4 +62,28 @@
 .formCadastroActive .formCadastro {
   opacity: 1;
   pointer-events: auto;
+}
+.galho{
+  background-image: url('/galhos.png');
+  width: 370px;
+  height: 210px;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  right: 49px;
+}
+.alingGalho{
+  width: 100%;
+  height: 30%;
+  display: flex;
+  align-items:baseline;
+  justify-content: baseline;
+}
+.alingLogin{
+  width: 50%;
+  height: 70%;
+  display:flex ;
+  align-items: baseline;
+  justify-content: baseline;
+  flex-direction: column;
 }

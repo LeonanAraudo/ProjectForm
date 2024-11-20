@@ -1,5 +1,6 @@
 'use client';
 
+import { Style } from '@mui/icons-material';
 import Cadastro from './componentes/formCadastro/cadastro';
 import Login from './componentes/formLogin/login';
 import style from './style.module.css';
@@ -21,8 +22,13 @@ export default function Home() {
                     <button onClick={toggleForms}>Ir para Login</button>
                 </div>
                 <div className={`${style.form} ${style.formLogin}`}>
-                    <Login />
-                    <button onClick={toggleForms}>Ir para Cadastro</button>
+                    <div className={style.alingGalho}>
+                        <div className={style.galho}></div>
+                    </div>
+                    <div className={style.alingLogin}>
+                       <Login />
+                       <button onClick={toggleForms}>Ir para Cadastro</button>
+                    </div>
                 </div>
             </div>
         </div>
