@@ -13,6 +13,8 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import { montserrat } from '../../fonts'
 import Stack from '@mui/material/Stack';
 import Button from '@mui/material/Button';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faApple, faFacebookF, faGooglePlusG } from '@fortawesome/free-brands-svg-icons';
 
 const theme = createTheme({
     palette: {
@@ -31,7 +33,7 @@ const theme = createTheme({
       MuiButton: {
         styleOverrides: {
           root: {
-            padding: '4px 60px', 
+            padding: '4px 55px', 
             fontSize: '16px', 
             textTransform: 'none'
           },
@@ -78,12 +80,12 @@ export default function Login(){
     <ThemeProvider theme={theme}>
              <Box
                 component="form"
-                sx={{ m: 1, width: '35ch',display:'flex',flexDirection:'column',gap:'30px' } }
+                sx={{ m: 1, width: '32ch',display:'flex',flexDirection:'column',gap:'30px' } }
                 >
                 <TextField id="standard-basic" label="Name" variant="standard" />
-                <FormControl sx={{ width: '35ch' }} variant="standard">
+                <FormControl sx={{ width: '32ch' }} variant="standard">
                     <InputLabel htmlFor="standard-adornment-password" sx={{
-            input: { color: '#ffffff' }, // Cor do texto no campo
+            input: { color: '#ffffff' }, 
           }}>Password</InputLabel>
                     <Input
                         id="standard-adornment-password"
@@ -104,15 +106,34 @@ export default function Login(){
                         }
                     />
                 </FormControl>
-                <Stack  direction="row" sx={{display:'flex', alingItens:'center', justifyContent:'center'}}>
+                <Stack  direction="row" sx={{display:'flex', alingItens:'center', justifyContent:'center',marginTop:'15px'}}>
                   <Button variant="contained" color='secondary'>Entrar</Button>
                 </Stack>
              </Box>
     </ThemeProvider>
       <div>
-        <p>Login as</p>
+        <p className='text-center mt-6 mb-4'>Login as</p>
         <div>
-          
+        <nav>
+          <ul className='gap-5 flex flex-row items-center justify-center'>
+            <li>
+              <a href='#'>       
+                <FontAwesomeIcon icon={faGooglePlusG} style={{color: "#ffffff",width:'30px',height:'30px'}} />
+              </a>
+            </li>
+            <li>
+              <a href='#'>   
+                 <FontAwesomeIcon icon={faFacebookF} style={{color: "#ffffff",width:'21px',height:'21px'}}/>
+              </a>
+            </li>
+            <li>
+              <a href='#'>   
+                <FontAwesomeIcon icon={faApple} style={{color: "#ffffff", width:'27px',height:'27px'}}/>
+              </a>
+            </li>
+          </ul>
+        </nav>
+  
         </div>
       </div>
     </div>
