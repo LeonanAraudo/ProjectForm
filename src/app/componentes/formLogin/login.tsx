@@ -106,7 +106,7 @@ export default function Login(){
                         }
                     />
                 </FormControl>
-                <Stack  direction="row" sx={{display:'flex', alingItens:'center', justifyContent:'center',marginTop:'15px'}}>
+                <Stack  direction="row" sx={{display:'flex', alingItens:'center', justifyContent:'center',marginTop:'10px'}}>
                   <Button variant="contained" color='secondary'>Entrar</Button>
                 </Stack>
              </Box>
@@ -118,17 +118,17 @@ export default function Login(){
           <ul className='gap-5 flex flex-row items-center justify-center'>
             <li>
               <a href='#'>       
-                <FontAwesomeIcon icon={faGooglePlusG} style={{color: "#ffffff",width:'30px',height:'30px'}} />
+                <FontAwesomeIcon className='transition duration-400 transform hover:scale-110' icon={faGooglePlusG} style={{color: "#ffffff",width:'30px',height:'30px'}} />
               </a>
             </li>
             <li>
               <a href='#'>   
-                 <FontAwesomeIcon icon={faFacebookF} style={{color: "#ffffff",width:'21px',height:'21px'}}/>
+                 <FontAwesomeIcon className='transition duration-400 transform hover:scale-110' icon={faFacebookF} style={{color: "#ffffff",width:'21px',height:'21px'}}/>
               </a>
             </li>
-            <li>
+            <li >
               <a href='#'>   
-                <FontAwesomeIcon icon={faApple} style={{color: "#ffffff", width:'27px',height:'27px'}}/>
+                <FontAwesomeIcon className='transition duration-400 transform hover:scale-110' icon={faApple} style={{color: "#ffffff", width:'27px',height:'27px'}}/>
               </a>
             </li>
           </ul>
