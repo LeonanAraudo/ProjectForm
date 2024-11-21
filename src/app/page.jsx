@@ -25,6 +25,7 @@ export default function Home() {
                     </div>
                     <div className={style.alingLogin}>
                        <Login />
+                       <button onClick={toggleForms}>Ir para cadastro</button>
                     </div>
                 </div>
             </div>
