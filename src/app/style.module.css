@@ -52,7 +52,7 @@
 }
 
 .formCadastroActive .imagem {
-  transform: translateX(125%); 
+  transform: translateX(122%); 
 }
 
 .formCadastroActive .formLogin {
@@ -71,7 +71,7 @@
   background-size: cover;
   background-position: center;
   position: relative;
-  right: 49px;
+  right: 53px;
 }
 .alingGalho{
   width: 100%;
@@ -88,4 +88,26 @@
   align-items: baseline;
   justify-content: baseline;
   flex-direction: column;
+}
+.buttons{
+  position: absolute;
+  left: 33%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.buttonSpace{
+  width: 200px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(0, 0, 0);
+  border-radius: 10px;
+}
+.formCadastroActive .buttons{
+  left: 53%;
+}
+.formCadastroActive .buttonSpace{
+  height: 40px;
 }

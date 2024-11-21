@@ -15,9 +15,16 @@ export default function Home() {
         <div className={`${style.container} ${isCadastro ? style.formCadastroActive : ''}`}>
             <div className={style.imagem}></div>
             <div className={style.formContainer}>
+            <div className={style.buttons}>
+                <div className={style.buttonSpace}>                
+                    <button onClick={toggleForms} >Sign In</button>
+                </div>
+                <div className={style.buttonSpace}>                
+                    <button onClick={toggleForms}>Sign Up</button>
+                </div>
+            </div>
                 <div className={`${style.form} ${style.formCadastro}`}>
                     <Cadastro />
-                    <button onClick={toggleForms}>Ir para Login</button>
                 </div>
                 <div className={`${style.form} ${style.formLogin}`}>
                     <div className={style.alingGalho}>
@@ -25,7 +32,6 @@ export default function Home() {
                     </div>
                     <div className={style.alingLogin}>
                        <Login />
-                       <button onClick={toggleForms}>Ir para cadastro</button>
                     </div>
                 </div>
             </div>
