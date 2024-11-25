@@ -69,7 +69,8 @@ export default function Cadastro(){
       event.preventDefault();
     };
     return(
-    <div>
+    <div className='h-[100%] flex items-center justify-center pt-20'>
+      <div>
     <div className={`w-[100%] ${montserrat.className}`}>
       <strong className='mt-4 mb-4 text-lg'>Cadastro</strong>
     </div>
@@ -127,10 +128,8 @@ export default function Cadastro(){
                 </Stack>
              </Box>
     </ThemeProvider>
-          <div className=''>
-            <img width="50" height="50" src="https://img.icons8.com/ios-filled/50/FFFFFF/pet-commands-train.png" alt="pet-commands-train"/>
-            <img width="30" height="30" src="https://img.icons8.com/ios-glyphs/30/FFFFFF/orchid.png" alt="orchid"/>
-          </div>
+        </div>
+         
     </div>
     )
 }
