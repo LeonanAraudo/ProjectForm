@@ -10,15 +10,33 @@ import TextField from '@mui/material/TextField';
 import Visibility from '@mui/icons-material/Visibility';
 import VisibilityOff from '@mui/icons-material/VisibilityOff'
 import { createTheme, ThemeProvider } from '@mui/material/styles';
+import { montserrat } from '../../fonts'
+import Stack from '@mui/material/Stack';
+import Button from '@mui/material/Button';
 
 const theme = createTheme({
     palette: {
       mode: 'dark',
       primary: {
-        main: '#ffffff', // Cor do texto e borda
+        main: '#ffffff', 
       },
+      secondary:{
+        main: '#111111'
+      }
+    },
+    typography:{
+      fontFamily: montserrat.style.fontFamily
     },
     components: {
+      MuiButton: {
+        styleOverrides: {
+          root: {
+            padding: '4px 55px', 
+            fontSize: '16px', 
+            textTransform: 'none'
+          },
+        },
+      },
       MuiOutlinedInput: {
         styleOverrides: {
           root: {
@@ -51,17 +69,19 @@ export default function Cadastro(){
       event.preventDefault();
     };
     return(
-    <>
-    <p>Cadastro</p>
+    <div>
+    <div className={`w-[100%] ${montserrat.className}`}>
+      <strong className='mt-4 mb-4 text-lg'>Cadastro</strong>
+    </div>
     <ThemeProvider theme={theme}>
 
              <Box
                 component="form"
-                sx={{ m: 1, width: '35ch',display:'flex',flexDirection:'column' } }
+                sx={{ m: 1, width: '38ch',display:'flex',flexDirection:'column',gap:'30px' } }
                 >
-                <TextField id="standard-basic" label="Nome" variant="standard" />
-                <FormControl sx={{ width: '35ch' }} variant="standard">
-                    <InputLabel htmlFor="standard-adornment-password">Senha</InputLabel>
+                <TextField id="standard-basic" label="Name" variant="standard" />
+                <FormControl sx={{ width: '38ch' }} variant="standard">
+                    <InputLabel htmlFor="standard-adornment-password">Password</InputLabel>
                     <Input
                         id="standard-adornment-password"
                         type={showPassword ? 'text' : 'password'}
@@ -81,8 +101,8 @@ export default function Cadastro(){
                         }
                     />
                 </FormControl>
-                <FormControl sx={{ width: '35ch' }} variant="standard">
-                    <InputLabel htmlFor="standard-adornment-password">Confirmar Senha</InputLabel>
+                <FormControl sx={{ width: '38ch' }} variant="standard">
+                    <InputLabel htmlFor="standard-adornment-password">Confirm Password</InputLabel>
                     <Input
                         id="standard-adornment-password"
                         type={showPassword ? 'text' : 'password'}
@@ -102,9 +122,11 @@ export default function Cadastro(){
                         }
                     />
                 </FormControl>
-                <button>Cadastrar</button>
+                <Stack  direction="row" sx={{display:'flex', alingItens:'center', justifyContent:'center',marginTop:'10px'}}>
+                  <Button variant="contained" color='secondary'>Sign Up</Button>
+                </Stack>
              </Box>
     </ThemeProvider>
-    </>
+    </div>
     )
 }

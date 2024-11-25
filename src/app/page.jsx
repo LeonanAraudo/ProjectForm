@@ -19,7 +19,7 @@ export default function Home() {
                 <div className={style.buttonSpace}>                
                     <button onClick={toggleForms} >Sign In</button>
                 </div>
-                <div className={style.buttonSpace}>                
+                <div className={style.buttonSpace2}>                
                     <button onClick={toggleForms}>Sign Up</button>
                 </div>
             </div>
