@@ -124,7 +124,7 @@ export default function Cadastro(){
                     />
                 </FormControl>
                 <Stack  direction="row" sx={{display:'flex', alingItens:'center', justifyContent:'center',marginTop:'10px'}}>
-                  <Button variant="contained" color='secondary'>Sign Up</Button>
+                  <Button variant="contained" color='secondary'>Cadastrar</Button>
                 </Stack>
              </Box>
     </ThemeProvider>

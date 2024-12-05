@@ -15,15 +15,15 @@ export default function Home() {
         <div className={`${style.container} ${isCadastro ? style.formCadastroActive : ''}`}>
             <div className={style.imagem}></div>
             <div className={style.formContainer}>
-            <div className={style.buttons}>
-                <div className={style.buttonSpace}>                
-                    <button onClick={toggleForms} >Sign In</button>
-                </div>
-                <div className={style.buttonSpace2}>                
-                    <button onClick={toggleForms}>Sign Up</button>
-                </div>
-            </div>
+        
                 <div className={`${style.form} ${style.formCadastro}`}>
+                <div className={style.containerButtons}>
+                    <div className={style.buttons}>                                        
+                        <button className={style.buttonSpace1} onClick={toggleForms}>Sign Up</button>
+                        <div className='bg-gray-500 h-full w-[1px]'></div>
+                        <button className={style.buttonSpace} onClick={toggleForms} >Sign In</button>                                       
+                    </div>
+                </div>
                     <Cadastro />
                     <div className='flex items-center justify-center flex-row '>
                         <img width="50"  height="50" src="https://img.icons8.com/ios-filled/50/FFFFFF/pet-commands-train.png" alt="pet-commands-train"/>
@@ -32,6 +32,13 @@ export default function Home() {
                     </div>
                 </div>
                 <div className={`${style.form} ${style.formLogin}`}>
+                <div className={style.containerButtons}>
+                    <div className={style.buttons}>                                        
+                        <button className={style.buttonSpace1} onClick={toggleForms}>Sign Up</button>
+                        <div className='bg-gray-500 h-full w-[1px]'></div>
+                        <button className={style.buttonSpace} onClick={toggleForms} >Sign In</button>                                       
+                    </div>
+                </div>
                     <div className={style.alingGalho}>
                         <div className={style.galho}></div>
                     </div>
