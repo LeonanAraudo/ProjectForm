@@ -17,7 +17,7 @@ export default function Home() {
             <div className={style.formContainer}>
         
                 <div className={`${style.form} ${style.formCadastro}`}>
-                <div className={style.containerButtons}>
+                <div className={style.containerButtons2}>
                     <div className={style.buttons}>                                        
                         <button className={style.buttonSpace1} onClick={toggleForms}>Sign Up</button>
                         <div className='bg-gray-500 h-full w-[1px]'></div>
