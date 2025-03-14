@@ -18,6 +18,7 @@ Interface de Login e Cadastro
 ## Tecnologias
 
 - Next.js
+- Material UI
   
 
 <img width=100% src="https://capsule-render.vercel.app/api?type=waving&color=084808&height=120&section=footer"/>
